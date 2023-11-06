@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Kumbh+Sans:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+  <script src="script.js" defer></script>
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <img onclick="openMenu()" class="hamburger" src="images/icon-menu.svg">
+        <img class="logo" src="images/logo.svg" alt="logo">
+        <ul>
+          <img onclick="closeMenu()" class="close" src="images/icon-close.svg">
+          <li>Collections</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+        <div class="bgshadowmenu"></div>
+      </div>
+      <div>
+        <img onclick="viewCart()" class="cart-icon" src="images/icon-cart.svg" alt="icon-cart">
+        <img class="avatar" src="images/image-avatar.png" alt="image-avatar">
+      </div>
+    </header>
+    <div class="cart off">
+      <h3>Cart</h3>
+      <div class="cart-item">
+
+      </div>
+    </div> 
+    <main>
+      <section class="section-one avantzoom">
+        <div onclick="openZoom()" class="carousel">
+        <img class="product" src="images/image-product-1.jpg" alt="product">
+        <img class="other-product" src="images/image-product-2.jpg">
+        <img class="other-product" src="images/image-product-3.jpg">
+        <img class="other-product" src="images/image-product-4.jpg">
+        </div>
+        <div class="arrow">
+          <img onclick="previousMob()" class="previous" src="images/icon-previous.svg">
+          <img onclick="nextMob()" class="next" src="images/icon-next.svg">
+        </div>
+        <div class="thumbnail">
+          <img class="image-one" onclick="imageOne()" src="images/image-product-1-thumbnail.jpg">
+          <img class="image-two" onclick="imageTwo()" src="images/image-product-2-thumbnail.jpg">
+          <img class="image-three" onclick="imageThree()" src="images/image-product-3-thumbnail.jpg">
+          <img class="image-four" onclick="imageFour()" src="images/image-product-4-thumbnail.jpg">
+        </div>
+      </section>
+      <section class="section-one zoom">
+        <img onclick="closeZoom()" class="zoom-cross" src="images/icon-close.svg">
+        <div class="carousel">
+        <img class="product product1" src="images/image-product-1.jpg" alt="product">
+        <img class="other-product product2" src="images/image-product-2.jpg">
+        <img class="other-product product3" src="images/image-product-3.jpg">
+        <img class="other-product product4" src="images/image-product-4.jpg">
+        </div>
+        <div class="arrow">
+          <img onclick="previous()" class="previous" src="images/icon-previous.svg">
+          <img onclick="next()" class="next" src="images/icon-next.svg">
+        </div>
+        <div class="thumbnail">
+          <img class="image-one" onclick="imageOneZoom()" src="images/image-product-1-thumbnail.jpg">
+          <img class="image-two" onclick="imageTwoZoom()" src="images/image-product-2-thumbnail.jpg">
+          <img class="image-three" onclick="imageThreeZoom()" src="images/image-product-3-thumbnail.jpg">
+          <img class="image-four" onclick="imageFourZoom()" src="images/image-product-4-thumbnail.jpg">
+        </div>
+      </section>
+      <div class="zoombg"></div>
+
+      <section class="section-two">
+        <h2>Sneaker Company</h2>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        <div class="price-section"><h3>$125.00</h3><h4>50%</h4></div>
+        <h5>$250.00</h5>
+        <div class="add-to-cart-section">
+          <div class="compteur">
+            <img onclick="décrementer()" class="minus" src="images/icon-minus.svg" alt="icon-minus">
+            <span class="counter" data-valeur="0">0</span>
+            <img onclick="incrémenter()" class="plus" src="images/icon-plus.svg" alt="icon-plus">
+          </div>
+          <button onclick="addToCart()">
+            <img src="images/icon-cart.svg" alt="add-to-cart-icon">
+            <p>Add to cart</p>
+          </button>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
